@@ -9,14 +9,14 @@ int main(void)
 {
 	int tens;
 	int ones;
-	
-	for (tens = 0; tens <= 9; tens++)
+
+	for (tens = 48; tens <= 57; tens++)
 	{
-		for (ones = 0; ones <= 9; ones++)
+		for (ones = 48; ones <= 57; ones++)
 		{
-			putchar('0' + tens);
-			putchar('0' + ones);
-			if (ones != 9 || tens != 9)
+			putchar(tens);
+			putchar(ones);
+			if (ones != 57 || tens != 57)
 			{
 				putchar(44);
 				putchar(32);
