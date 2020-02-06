@@ -6,18 +6,11 @@
  * Return: Always 0 (Success)
 */
 int main(void)
-{
-	char szof[] = "Size of ";
-	int charsize = sizeof(char);
-	int intsize = sizeof(int);
-	int longintsize = sizeof(long int);
-	int longlongintsize = sizeof(long long int);
-	int floatsize = sizeof(float);
-
-	printf("%s a char: %d bytes(s)\n", szof, charsize);
-	printf("%s an int: %d bytes(s)\n", szof, intsize);
-	printf("%s a long int: %d bytes(s)\n", szof, longintsize);
-	printf("%s a long long int: %d bytes(s)\n", szof, longlongintsize);
-	printf("%s a float: %d bytes(s)\n", szof, floatsize);
+{	
+	printf("Size of a char: %d bytes(s)\n", sizeof(char));
+	printf("Size of an int: %zu bytes(s)\n", sizeof(int));
+	printf("Size of a long int: %zu bytes(s)\n", sizeof(long int));
+	printf("Size of a long long int: %zu bytes(s)\n", sizeof(long long int));
+	printf("Size of a float: %zu bytes(s)\n", sizeof(float));
 	return (0);
 }
