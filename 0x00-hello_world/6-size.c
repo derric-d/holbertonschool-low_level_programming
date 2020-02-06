@@ -19,6 +19,5 @@ int main(void)
 	printf("%s a long int: %d bytes(s)\n", szof, longintsize);
 	printf("%s a long long int: %d bytes(s)\n", szof, longlongintsize);
 	printf("%s a float: %d bytes(s)\n", szof, floatsize);
-	printf("%s a char: %d bytes(s)\n", szof, charsize);
 	return (0);
 }
