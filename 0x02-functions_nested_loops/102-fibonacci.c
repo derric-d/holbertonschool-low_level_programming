@@ -12,7 +12,7 @@ int main(void)
 
 	printf("%lu, %lu", t1, t2);
 	for (i = 0; i <= n; i++)
-	{	
+	{
 		nextTerm = t1 + t2;
 		printf(", %lu", nextTerm);
 		t1 = t2;
