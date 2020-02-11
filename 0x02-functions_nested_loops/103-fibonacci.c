@@ -6,16 +6,19 @@
  */
 int main(void)
 {
-	unsigned long int i, n, t1 = 1, t2 = 2, nextTerm;
+	unsigned long i, n, t1, t2, nextTerm;
 	int limit = 4000000;
 	
-	n = 0;
-	for (i = 0; nextTerm <= limit; i++)
+	t1 = 1;
+	t2 = 2;
+	nextTerm = 0;
+	n = 2;
+	for (i = 0; nextTerm < limit; i++)
 	{
 		nextTerm = t1 + t2;
 		t1 = t2;
 		t2 = nextTerm;
-		if (nextTerm % 2 == 0 && nextTerm < 4000000)
+		if (nextTerm % 2 == 0 && nextTerm < limit)
 		{
 			n += nextTerm;
 		}
