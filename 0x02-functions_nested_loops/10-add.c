@@ -1,15 +1,12 @@
 #include "holberton.h"
-#include <stdio.h>
-
-int main(void)
-{
-	int a = add(5, 7);
-
-	printf("%d", a);
-	return (0);
-}
-
-int add(a, b)
+/**
+ * add - returns sum of two ints
+ * @a: first int
+ * @b: second int
+ * Description: returns sum of two ints
+ * Return: sum of two ints
+ */
+int add(int a, int b)
 {
 	int sum = a + b;
 

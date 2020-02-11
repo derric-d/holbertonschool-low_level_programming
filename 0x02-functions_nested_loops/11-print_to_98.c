@@ -1,10 +1,11 @@
 #include "holberton.h"
-#include <stdio.h>
-int main(void)
-{
-	print_to_98(11);
-	return (0);
-}
+#include <stdlib.h>
+/**
+ * print_to_98 - prints from any int to 98
+ * @start: starting point as int
+ * Description: prints integers from start until 98
+ * Return: void
+ */
 void print_to_98(int start)
 {
 

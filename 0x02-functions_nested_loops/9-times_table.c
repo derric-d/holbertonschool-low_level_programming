@@ -1,11 +1,9 @@
 #include "holberton.h"
-
-int main(void)
-{
-	times_table();
-	return (0);
-}
-
+/**
+ * times_table - prints times table
+ * Description: prints out times table to 9x9
+ * Return: void
+ */
 void times_table(void)
 {
 	int i, j, mult;

@@ -1,7 +1,8 @@
 #include "holberton.h"
+
 /**
  * main - entry point
- *
+ * Description: This function prints.
  * Return: 0 on success
  */
 int main(void)
