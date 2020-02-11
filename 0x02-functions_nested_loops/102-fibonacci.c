@@ -8,10 +8,8 @@ int main(void)
 {
 	unsigned long int i, n, t1 = 1, t2 = 2, nextTerm;
 
-	n = 48;
-
 	printf("%lu, %lu", t1, t2);
-	for (i = 0; i <= n; i++)
+	for (i = 0; i <= 48; i++)
 	{
 		nextTerm = t1 + t2;
 		printf(", %lu", nextTerm);
