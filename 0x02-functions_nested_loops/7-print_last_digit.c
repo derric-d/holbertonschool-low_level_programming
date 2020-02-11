@@ -9,26 +9,14 @@ int print_last_digit(int n)
 {
 	int num;
 	int pos;
-
-	if (n < 10)
-	{
-		num = n;
-	}
-	else if (n < 0)
-	{
-		pos = n * -1;
-		num = pos % 10;
-		_putchar(num % 10);
-	}
-	else if (n == 0)
-	{
-		_putchar(n);
-	}
+	
+	num = n % 10;
+	if (num > 0)
+		pos =  num;
 	else
-	{
-		num = n % 10;
-		_putchar(num);
-	}
-	return (num);
+		pos = num * -1;
+
+	_putchar(pos);
+	return (pos);
 
 }
