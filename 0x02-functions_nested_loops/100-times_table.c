@@ -23,24 +23,18 @@ void print_times_table(int n)
 			}
 			else if (mult < 10)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
+				print_space(3);
 				_putchar(mult + '0');
 			}
 			else if (mult >= 10 && mult < 100)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+				print_space(2);
 				_putchar((mult / 10) + '0');
 				_putchar((mult % 10) + '0');
 			}
 			else
 			{
-				_putchar(',');
-				_putchar(' ');
+				print_space(1);
 				_putchar((mult / 100) + '0');
 				_putchar(((mult % 100) / 10) + '0');
 				_putchar((mult % 10) + '0');
@@ -48,5 +42,21 @@ void print_times_table(int n)
 			if (j == n)
 				_putchar('\n');
 		}
+	}
+}
+/**
+ * print_space - prints comma and space w/ out putchar
+ * @spaces: number of spaces to be printed
+ * Description: makes space
+ * Return: void
+ */
+void print_space(int spaces)
+{
+	int i;
+
+	_putchar(',');
+	for (i = 0; i < spaces; i++)
+	{
+		_putchar(' ');
 	}
 }
