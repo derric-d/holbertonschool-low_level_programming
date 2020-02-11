@@ -6,23 +6,20 @@
  */
 int main(void)
 {
-	unsigned long int i, t1 = 1, t2 = 2, nextTerm;
-	unsigned long int limit = 4000000;
-
-	printf("%lu", t2);
-	if (nextTerm < limit)
-	{	
-		for (i = 0; i <= 47; i++)
+	unsigned long int i, n, t1 = 1, t2 = 2, nextTerm;
+	int limit = 4000000;
+	
+	n = 0;
+	for (i = 0; nextTerm <= limit; i++)
+	{
+		nextTerm = t1 + t2;
+		t1 = t2;
+		t2 = nextTerm;
+		if (nextTerm % 2 == 0)
 		{
-			nextTerm = t1 + t2;
-			if (nextTerm % 2 == 0)
-			{
-				printf(", %lu", nextTerm);
-			}
-				t1 = t2;
-				t2 = nextTerm;
+			n += nextTerm;
 		}
 	}
-	printf("\n");
+	printf("%lu\n", n);
 	return (0);
 }
