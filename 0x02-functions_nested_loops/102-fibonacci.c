@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned long int i, n, t1 = 1, t2 = 2, nextTerm;
+	unsigned long int i, t1 = 1, t2 = 2, nextTerm;
 
 	printf("%lu, %lu", t1, t2);
 	for (i = 0; i <= 48; i++)
