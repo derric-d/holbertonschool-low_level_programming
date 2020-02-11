@@ -7,13 +7,15 @@
  */
 int main(void)
 {
-	char name[9] = "Holberton";
-	int num;
-
-	for (num = 0; num <= 9; num++)
-	{
-		_putchar(name[num]);
-	}
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
 	_putchar('\n');
 	return (0);
 }
