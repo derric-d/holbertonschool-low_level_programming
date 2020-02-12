@@ -7,14 +7,12 @@
 
 int main(void)
 {
-	unsigned int t1, t2, nextTerm, total;
-	int limit = 4000000;
+	long int t1, t2, nextTerm;
+	long int total = 0;
 
 	t1 = 1;
 	t2 = 2;
-	nextTerm = 0;
-	total = 0;
-	while (nextTerm < limit)
+	while (t2 < 4000000)
 	{
 		if (t2 % 2 == 0)
 		{
@@ -24,6 +22,6 @@ int main(void)
 		t2 += t1;
 		t1 = nextTerm;
 	}
-	printf("%u\n", total);
+	printf("%ld\n", total);
 	return (0);
 }
