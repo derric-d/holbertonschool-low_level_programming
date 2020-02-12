@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	unsigned long i, t1, t2, nextTerm, total;
+	long int i, t1, t2, nextTerm, total;
 	int limit = 4000000;
-	
+
 	t1 = 1;
 	t2 = 2;
 	nextTerm = 3;
