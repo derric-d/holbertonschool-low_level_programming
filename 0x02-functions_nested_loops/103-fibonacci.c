@@ -16,7 +16,7 @@ int main(void)
 	total = 0;
 	while (nextTerm < limit)
 	{
-		if (nextTerm % 2 == 0)
+		if (t2 % 2 == 0)
 		{
 			total += nextTerm;
 		}
