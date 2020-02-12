@@ -6,23 +6,23 @@
  */
 int main(void)
 {
-	unsigned long i, n, t1, t2, nextTerm;
+	unsigned long i, t1, t2, nextTerm, total;
 	int limit = 4000000;
 	
 	t1 = 1;
 	t2 = 2;
-	nextTerm = 0;
-	n = 2;
-	for (i = 0; nextTerm < limit; i++)
+	nextTerm = 3;
+	total = 2;
+	while (nextTerm < limit)
 	{
+		if (nextTerm % 2 == 0 && nextTerm < limit)
+		{
+			total += nextTerm;
+		}
 		nextTerm = t1 + t2;
 		t1 = t2;
 		t2 = nextTerm;
-		if (nextTerm % 2 == 0 && nextTerm < limit)
-		{
-			n += nextTerm;
-		}
 	}
-	printf("%lu\n", n);
+	printf("%lu\n", total);
 	return (0);
 }
