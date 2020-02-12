@@ -24,6 +24,6 @@ int main(void)
 		t1 = t2;
 		t2 = nextTerm;
 	}
-	printf("%lu\n", total);
+	printf("%ld\n", total);
 	return (0);
 }
