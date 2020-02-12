@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "holberton.h"
+#include <stdlib.h>
 /**
  * main - entry point
  * Description: returns 1st 50 fib seqs
@@ -16,13 +16,13 @@ int main(void)
 	total = 2;
 	while (nextTerm < limit)
 	{
-		if (nextTerm % 2 == 0 && nextTerm < limit)
+		if (nextTerm % 2 == 0)
 		{
 			total += nextTerm;
 		}
-		nextTerm = t1 + t2;
 		t1 = t2;
 		t2 = nextTerm;
+		nextTerm = t1 + t2;
 	}
 	printf("%ld\n", total);
 	return (0);
