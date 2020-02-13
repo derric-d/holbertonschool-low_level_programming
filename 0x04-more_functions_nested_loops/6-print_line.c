@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 /**
  * print_line - prints line n times
