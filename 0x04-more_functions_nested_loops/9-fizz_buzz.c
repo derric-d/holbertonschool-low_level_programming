@@ -20,6 +20,7 @@ int main(void)
 void fizzbuzz(void)
 {
 	int i;
+
 	printf("%s", "1");
 	for (i = 2; i <= 100; i++)
 	{
