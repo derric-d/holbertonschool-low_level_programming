@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * swap_int - swap values of variables a and b
+ * @a: var 1
+ * @b: var 2
+ */
 void swap_int(int *a, int *b)
 {
 	int a1 = *a;

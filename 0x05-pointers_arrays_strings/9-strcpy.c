@@ -2,8 +2,9 @@
 
 /**
  * _strcpy - takes string from src array and copies to dest
- * @dest: destination array 
+ * @dest: destination array
  * @src: array we copy
+ * Return: Returns dest array, which is a copy of src
  */
 char *_strcpy(char *dest, char *src)
 {

@@ -2,7 +2,6 @@
 #include "stdio.h"
 /**
  * print_array - prints array formatted
- * @a: array input
  * @n: number of elements we print to
  */
 void print_number(int n);
@@ -10,6 +9,7 @@ void print_number(int n);
 void print_array(int *a, int n)
 {
 	int i, element, last_element;
+
 	for (i = 0; i < (n - 1); i++)
 	{
 		element = *(a + i);
@@ -21,20 +21,11 @@ void print_array(int *a, int n)
 	print_number(last_element);
 	_putchar('\n');
 }
-/*#include <unistd.h>*/
+
 /**
- * _putchar - prints 1 byte at a time
- * @c: print object
+ * print_number - uses _putchar to print multidigits
+ * @n: number to print
  */
- /*
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}*/
- /**
-  * print_number - uses _putchar to print multidigits
-  * @n: number to print
-  */
 void print_number(int n)
 {
 	if (n < 0)

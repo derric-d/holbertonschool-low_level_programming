@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- *
- *
+ * puts2 - prints every other string interval
+ * @str: string passed
  */
 void puts2(char *str)
 {
-	int i = 0, j;	
+	int i = 0, j;
 
 	while (str[i] != '\0')
 		i++;
