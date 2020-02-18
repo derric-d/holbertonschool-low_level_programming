@@ -1,11 +1,10 @@
 #include "holberton.h"
-#include "stdio.h"
+
 /**
  * print_array - prints array formatted
  * @n: number of elements we print to
  */
 void print_number(int n);
-/*int _putchar(char c);*/
 void print_array(int *a, int n)
 {
 	int i, element, last_element;
@@ -17,7 +16,7 @@ void print_array(int *a, int n)
 		_putchar(',');
 		_putchar(' ');
 	}
-	last_element = *(a + 1);
+	last_element = *(a + i);
 	print_number(last_element);
 	_putchar('\n');
 }
