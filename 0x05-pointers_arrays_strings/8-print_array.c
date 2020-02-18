@@ -7,17 +7,18 @@
 void print_number(int n);
 void print_array(int *a, int n)
 {
-	int i, element, last_element;
+	int i, element, first_element;
 
-	for (i = 0; i < (n - 1); i++)
+	first_element = *(a + 0);
+	print_number(first_element);
+	for (i = 1; i < n; i++)
 	{
-		element = *(a + i);
-		print_number(element);
 		_putchar(',');
 		_putchar(' ');
+		element = *(a + i);
+		print_number(element);
 	}
-	last_element = *(a + i);
-	print_number(last_element);
+
 	_putchar('\n');
 }
 
