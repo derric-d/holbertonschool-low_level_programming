@@ -10,12 +10,12 @@ void print_array(int *a, int n)
 	int i, element, first_element;
 
 	first_element = *(a + 0);
-	
+
 	if (n > 0)
 	{
 		print_number(first_element);
 		for (i = 1; i < n; i++)
-		{		
+		{
 			_putchar(',');
 			_putchar(' ');
 			element = *(a + i);
