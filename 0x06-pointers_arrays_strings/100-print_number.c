@@ -8,7 +8,7 @@
 void print_number(int number)
 {
 	char lastDigit;
-	long reversed;
+	int reversed;
 	char c;
 
 	if (number < 0)
