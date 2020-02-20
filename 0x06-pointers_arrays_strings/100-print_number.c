@@ -21,16 +21,12 @@ void print_number(int number)
 		lastDigit = (char)((number % 10) + '0');
 		number /= 10;
 	}
-
-    // Reverse the number
 	reversed = 0;
 	while (number > 0)
 	{
 		reversed = reversed * 10 + (number % 10);
 		number /= 10;
 	}
-
-    // Now, output the number using only putchar()
 	while (reversed > 0)
 	{
 		char c = (char)((reversed % 10) + '0');
