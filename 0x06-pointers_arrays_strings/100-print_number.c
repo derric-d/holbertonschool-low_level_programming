@@ -2,13 +2,14 @@
 #include <limits.h>
 /**
  * print_number - prints number using putchar
- * @n: number getting printed
+ * @number: number getting printed
  * Return: void
  */
 void print_number(int number)
 {
 	char lastDigit;
 	long reversed;
+	char c;
 
 	if (number < 0)
 	{
@@ -29,7 +30,7 @@ void print_number(int number)
 	}
 	while (reversed > 0)
 	{
-		char c = (char)((reversed % 10) + '0');
+		c = (char)((reversed % 10) + '0');
 		_putchar(c);
 		reversed /= 10;
 	}
