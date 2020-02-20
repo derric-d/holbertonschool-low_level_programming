@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#define INT_MIN -2147483648
 /**
  * main - check the code for Holberton School students.
  *
@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-    print_number(98);
+    print_number(INT_MIN);
     _putchar('\n');
     print_number(402);
     _putchar('\n');
