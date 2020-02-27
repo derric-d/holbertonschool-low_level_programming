@@ -1,0 +1,23 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * wildcmp - compares two strings for likeness
+ * @s1: model string
+ * @s2: compare string, may have wildcard '*'
+ * Return: 1 if strings are identicle, else 0
+ */
+int wildcmp(char *s1, char *s2)
+{
+	if (!*s1 && !*s2)
+		return (1);
+	if (s2 == NULL)
+		return (0);
+	if (!*s1 && *(s2 + 1) && *s2 == '*')
+		return (0);
+	if (*s1 == *s2)
+		return (wildcmp(s1 + 1, s2 + 1));
+	if (*s2 == '*')
+	:	return (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1));
+	return (0);
+}
