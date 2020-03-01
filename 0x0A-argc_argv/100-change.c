@@ -17,8 +17,8 @@ int main(int argc, char **argv)
 	change = atoi(argv[1]);
 	if (change < 0)
 	{
-		puts("0\n");
-		return (1);
+		puts("0");
+		return (0);
 	}
 	if (argc != 2)
 	{
