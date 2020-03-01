@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	long change, coins;
 	int i;
 	int coin_list[5] = {25, 10, 5, 2, 1};
-	
+
 	coins = 0;
 	if (argc != 2)
 	{
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 			coins++;
 			change -= coin_list[i];
 		}
-	}	
+	}
 	printf("%li\n", coins);
 	return (0);
 }
