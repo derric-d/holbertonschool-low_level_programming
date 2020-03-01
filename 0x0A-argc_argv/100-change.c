@@ -12,30 +12,27 @@ int main(int argc, char **argv)
 	long change, coins;
 	int i;
 	int coin_list[5] = {25, 10, 5, 2, 1};
-
+	
 	coins = 0;
-	if (argc < 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else if (atoi(argv[1]) < 0)
+	change = atoi(argv[1]);
+	if (change < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	else
+	for (i = 0; i < 5; i++)
 	{
-		for (i = 0; i < 5; i++)
+		while (change - coin_list[i] >= 0)
 		{
-			change = atoi(argv[1]);
-			while (change - coin_list[i] >= 0)
-			{
-				coins++;
-				change -= coin_list[i];
-			}
+			coins++;
+			change -= coin_list[i];
 		}
-		printf("%li\n", coins);
-	}
+	}	
+	printf("%li\n", coins);
 	return (0);
 }
