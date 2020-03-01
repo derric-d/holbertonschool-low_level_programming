@@ -14,25 +14,28 @@ int main(int argc, char **argv)
 	int coin_list[5] = {25, 10, 5, 2, 1};
 
 	coins = 0;
-	change = atoi(argv[1]);
-	if (change < 0)
+	if (argc < 2)
 	{
-		puts("0");
-		return (0);
-	}
-	if (argc != 2)
-	{
-		puts("Error");
+		printf("Error\n");
 		return (1);
 	}
-	for (i = 0; i < 5; i++)
+	else if (atoi(argv[1]) < 0)
 	{
-		while (change - coin_list[i] >= 0)
-		{
-			coins++;
-			change -= coin_list[i];
-		}
+		printf("0\n");
+		return (0);
 	}
-	printf("%li\n", coins);
+	else
+	{
+		for (i = 0; i < 5; i++)
+		{
+			change = atoi(argv[1]);
+			while (change - coin_list[i] >= 0)
+			{
+				coins++;
+				change -= coin_list[i];
+			}
+		}
+		printf("%li\n", coins);
+	}
 	return (0);
 }
