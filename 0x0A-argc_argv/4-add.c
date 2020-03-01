@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - entry
+ * @argc: arg count
+ * @argv: arg vector
+ * Return: always 0
+ */
 int main(int argc, char **argv)
 {
 	int i, sum, j;

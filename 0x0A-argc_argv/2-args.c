@@ -1,5 +1,10 @@
 #include <stdio.h>
-
+/**
+ * main - entrypoint
+ * @argc: arg count
+ * @argv: argument vector
+ * Return: 0 on success
+ */
 int main(int argc, char **argv)
 {
 	int i;
