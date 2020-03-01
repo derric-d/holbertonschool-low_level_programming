@@ -15,7 +15,12 @@ int main(int argc, char **argv)
 
 	coins = 0;
 	change = atoi(argv[1]);
-	if (argc != 2 || change < 0)
+	if (change < 0)
+	{
+		puts("0\n");
+		return (1);
+	}
+	if (argc != 2)
 	{
 		puts("Error\n");
 		return (1);
