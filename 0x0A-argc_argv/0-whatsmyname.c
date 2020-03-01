@@ -1,8 +1,14 @@
 #include <stdio.h>
 
+/**
+ * main - entrypoint
+ * @argc: arg count
+ * @argv: argumentvector
+ * Return: 0 always
+ */
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
-	(void)argc;
+	if (argc)
+		printf("%s\n", argv[0]);
 	return (0);
 }
