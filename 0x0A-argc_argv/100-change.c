@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	}
 	if (argc != 2)
 	{
-		puts("Error\n");
+		puts("Error");
 		return (1);
 	}
 	for (i = 0; i < 5; i++)
