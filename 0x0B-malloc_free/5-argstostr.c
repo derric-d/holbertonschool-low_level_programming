@@ -2,21 +2,6 @@
 #include <stdlib.h>
 
 /**
- * _strlen - gets length of string
- * @s: string passed
- * Return: returns length i
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-/**
  * argstostr - stake in cmd line args
  * @ac: arg count
  * @av: argument vector
@@ -31,7 +16,8 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
-		len += _strlen(*(av + i));
+		for (j = 0; av[i][j]; j++, len++)
+			;
 
 	len += ac + 1;
 	dest = malloc(sizeof(char) * len);
@@ -40,10 +26,13 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++, z++)
+		for (j = 0; av[i][j]; j++)
+		{
 			dest[z] = av[i][j];
-
-		dest[z++] = '\n';
+			z++;
+		}
+		dest[z] = '\n';
+		z++;
 	}
 	dest[z] = '\0';
 	return (dest);
