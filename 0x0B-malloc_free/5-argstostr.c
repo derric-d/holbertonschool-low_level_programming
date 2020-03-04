@@ -21,6 +21,7 @@ char *argstostr(int ac, char **av)
 		for (j = 0; av[i][j] != '\0'; j++)
 			len++;
 
+		len++;
 		i++;
 	}
 
@@ -33,10 +34,11 @@ char *argstostr(int ac, char **av)
 	i = 0;
 	while (i < ac)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-			dest[z++] = av[i][j];
+		for (j = 0; av[i][j] != '\0'; j++, z++)
+			dest[z] = av[i][j];
 
-		dest[z++] = '\n';
+		dest[z] = '\n';
+		z++;
 		i++;
 	}
 	dest[z] = '\0';
