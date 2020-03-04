@@ -28,14 +28,12 @@ char *argstostr(int ac, char **av)
 	if (!dest)
 		return (NULL);
 
-	z = 0;
-	for (i = 0; i < ac; i++)
+	for (z = 0, i = 0; i < ac; i++, z++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++, z++)
 			dest[z] = av[i][j];
 
 		dest[z] = '\n';
-		z++;
 	}
 	dest[z] = '\0';
 	return (dest);
