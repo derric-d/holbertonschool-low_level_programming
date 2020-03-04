@@ -26,7 +26,6 @@ char *argstostr(int ac, char **av)
 {
 	char *dest;
 	int i, j, len, z;
-	*dest = NULL;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
