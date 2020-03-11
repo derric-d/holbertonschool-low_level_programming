@@ -27,10 +27,8 @@ int main(int argc, char **argv)
 		*h - interpret as short int x - unsigned hex
 		*/
 		printf("%02hhx", *p++);
-		if (bytes)
-			printf("%s", " ");
-		else
-			printf("%s", "\n");
+		
+		printf("%s", bytes ? " " : "\n");
 	}
 	return (0);
 }
