@@ -26,9 +26,7 @@ int main(int argc, char **argv)
 		*0 - left pad w/zero 2 - minimum 2 ints in result
 		*h - interpret as short int x - unsigned hex
 		*/
-		printf("%02hhx", *p++);
-		
-		printf("%s", bytes ? " " : "\n");
+		printf("%02hhx%s", *p++, bytes ? " " : "\n");
 	}
 	return (0);
 }
