@@ -10,7 +10,7 @@ void print_name(char *name, void (*f)(char *))
 	void (*fptr)(char *);
 
 	if (name == NULL || f == NULL)
-		return (NULL);
+		return;
 	fptr = f;
 	fptr(name);
 }
