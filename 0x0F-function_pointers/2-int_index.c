@@ -2,11 +2,11 @@
 #include "function_pointers.h"
 
 /**
- * int_index - executes function on each element of array
+ * int_index - performs function on each element.
  * @array: given array
  * @size: size of arr given
  * @cmp: function acting on each element
- * Return: returns element index
+ * Return: returns element of array
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
