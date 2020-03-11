@@ -28,9 +28,9 @@ int main(int argc, char **argv)
 		*/
 		printf("%02hhx", *p++);
 		if (bytes)
-			printf(" ");
+			printf("%s", " ");
 		else
-			printf("\n");
+			printf("%s", "\n");
 	}
 	return (0);
 }
