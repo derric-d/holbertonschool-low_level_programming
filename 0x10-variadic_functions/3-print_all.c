@@ -12,7 +12,8 @@ void print_all(const char * const format, ...)
 	int no_comma;
 
 	va_start(args, format);
-	for (i = 0; format != NULL && format[i] != '\0'; i++)
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
 		switch (format[i])
 		{
@@ -41,6 +42,8 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i + 1] != 0 && no_comma == 0)
 			printf(", ");
+
+		i++;
 	}
 	va_end(args);
 	printf("\n");
