@@ -26,7 +26,7 @@ int bincon(char *b, int i)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int ret_val;
-	
+
 	if (!b)
 		return (0);
 	ret_val = bincon((char *)b, 0);
