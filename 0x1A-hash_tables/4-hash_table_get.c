@@ -11,11 +11,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *hashnode;
 	unsigned int idx;
 
-	idx = hash_djb2((unsigned char *) key);
 
-	if (!key || !ht || !*key)
+	if (!key || !ht)
 		return (NULL);
 
+	idx = hash_djb2((unsigned char *) key);
 	hashnode = ht->array[idx % ht->size];
 
 	while (hashnode)
