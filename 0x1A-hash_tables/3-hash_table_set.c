@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	idx = hash_djb2((unsigned char *) key);
 	hashnode = ht->array[idx % ht->size];
-	if (!key || !ht || !value || !*key )
+	if (!key || !ht || !value || !*key)
 		return (0);
 	while (hashnode != NULL)
 	{
