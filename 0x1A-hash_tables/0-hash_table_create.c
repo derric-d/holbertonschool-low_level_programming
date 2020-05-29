@@ -10,12 +10,12 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned long int i = 0;
+	hash_table_t *hashtable;
 
 	if (!size)
 		return (NULL);
 
-	hash_table_t *hashtable = calloc(1, sizeof(hash_table_t));
+	hashtable = calloc(1, sizeof(hash_table_t));
 	if (!hashtable)
 		return (NULL);
 
