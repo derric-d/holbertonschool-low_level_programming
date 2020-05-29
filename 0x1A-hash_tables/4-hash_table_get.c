@@ -13,7 +13,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	idx = hash_djb2((unsigned char *) key);
 
-	if (!key || !ht)
+	if (!key || !ht || !*key)
 		return (NULL);
 
 	hashnode = ht->array[idx % ht->size];
