@@ -15,8 +15,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int idx;
 	hash_node_t *hashnode = NULL, *insert = NULL;
 
-	idx = hash_djb2((unsigned char *) key);
-	hashnode = ht->array[idx % ht->size];
+	idx = key_index((const unsigned char *)key, ht->size);
+	hashnode = ht->array[idx];
 	if (!key || !ht || !value || !*key)
 		return (0);
 	while (hashnode != NULL)
@@ -47,7 +47,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(insert);
 		return (0);
 	}
-	insert->next = ht->array[idx % ht->size];
-	ht->array[idx % ht->size] = insert;
+	insert->next = ht->array[idx];
+	ht->array[idx] = insert;
 	return (1);
 }
