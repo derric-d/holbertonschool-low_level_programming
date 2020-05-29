@@ -17,16 +17,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	idx = hash_djb2((unsigned char *) key);
 	hashnode = ht->array[idx % ht->size];
-	if (!key || !ht || !value || !*key)
+	if (!key || !ht || !value || !*key )
 		return (0);
 	while (hashnode != NULL)
 	{
 		if (strcmp(hashnode->key, key) == 0)
 		{
-			free(hashnode->value);
-			hashnode->value = strdup(value);
 			if (!hashnode->value)
 				return (0);
+			free(hashnode->value);
+			hashnode->value = strdup(value);
 			return (1);
 		}
 		hashnode = hashnode->next;
