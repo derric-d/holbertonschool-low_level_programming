@@ -32,10 +32,27 @@ int exponential_search(int *array, size_t size, int value)
 		split = i + 1;
 	i /= 2;
 	tmp = binary_search(array + i, split - i, value);
-	if (tmp == -1)
-		return (tmp);
-	else
-		return (tmp + (int)i);
+	return (tmp == -1 ? -1 : (tmp + (int)i));
+}
+
+/**
+ * arr_progression - print how we split through array
+ * @a: array we parse
+ * @start: start of array (left most, least in order)
+ * @end: higher end of the array
+ * Return: void
+ */
+void arr_progression(int *a, size_t start, size_t end)
+{
+	printf("Searching in array: ");
+	while (start <= end)
+	{
+		if (start == end)
+			printf("%d\n", a[start]);
+		else
+			printf("%d, ", a[start]);
+		++start;
+	}
 }
 
 /**
@@ -58,7 +75,7 @@ int binary_search(int *array, size_t size, int value)
 
 	while (start <= end)
 	{
-		/*arr_progression(array, start, end);*/
+		arr_progression(array, start, end);
 		mid = (start + end) / 2;
 		if (array[mid] < value)
 			start = mid + 1;
